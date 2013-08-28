@@ -1,7 +1,11 @@
 Vagrant.configure("2") do |config|
+  # PHPshow base box.
+  config.vm.box = "phpshow"
+  config.vm.box_url = "http://static.3ft9.com/phpshow.box"
+
   # Original base box.
-  config.vm.box = "precise32"
-  config.vm.box_url = "http://files.vagrantup.com/precise32.box"
+  #config.vm.box = "precise32"
+  #config.vm.box_url = "http://files.vagrantup.com/precise32.box"
 
   config.vm.network :forwarded_port, guest: 80, host: 8080
 
@@ -35,6 +39,6 @@ Vagrant.configure("2") do |config|
       },
     }
 
-    chef.log_level = :debug
+    #chef.log_level = :debug
   end
 end
