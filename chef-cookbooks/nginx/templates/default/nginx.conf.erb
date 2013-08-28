@@ -1,0 +1,21 @@
+<% if node[:nginx][:user] == 'nobody' %>#<% end %>user  <%= node[:nginx][:user] %>;
+worker_processes <%= node[:nginx][:worker_processes] %>;
+
+error_log off;
+
+events {
+    worker_connections <%= node[:nginx][:worker_connections] %>;
+}
+
+http {
+    include       mime.types;
+    default_type  application/octet-stream;
+
+    keepalive_timeout  <%= node[:nginx][:keepalive_timeout] %>;
+
+<% if not node[:nginx][:includes].empty? %>
+    <% node[:nginx][:includes].each do |spec| %>
+    include <%= spec %>;
+    <% end %>
+<% end %>
+}

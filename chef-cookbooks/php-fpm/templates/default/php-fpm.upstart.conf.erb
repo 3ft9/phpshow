@@ -1,0 +1,15 @@
+description "php-fpm"
+
+start on (filesystem and net-device-up IFACE=lo)
+stop on runlevel [2345]
+
+env DAEMON=/usr/local/sbin/php-fpm
+env CONF=/usr/local/etc/php-fpm.conf
+env PID=<%= node[:fpm][:pid] %>
+
+expect fork
+respawn
+respawn limit 100 60
+#oom never
+
+exec $DAEMON --fpm-config $CONF
