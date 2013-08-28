@@ -2,13 +2,17 @@
 
 This repository contains almost everything you need to quickly get up and running with a virtual machine so you can follow along and experiment on your own.
 
+## Quick Start ([TL;DR](http://en.wikipedia.org/wiki/Wikipedia:Too_long;_didn't_read "TL;DR on Wikipedia") option)
+
+[Follow along with this video](http://youtube.com/ "PHPshow: Setup your environment").
+
 ## Requirements
 
-The environment we're using is based on a [Vagrant](http://www.vagrantup.com/ "Vagrant") virtual machine that we've built, containing a working installation of [nginx](http://nginx.org/en/download.html "nginx"), [PHP 5.5.3](http://php.net/downloads.php), and [MySQL 5.6.13](http://dev.mysql.com/downloads/mysql/ "MySQL Server").
+The environment we're using is based on a [Vagrant](http://www.vagrantup.com/ "Vagrant") virtual machine that we've built, containing a working installation of [nginx 1.4.2](http://nginx.org/en/download.html "nginx"), [PHP 5.5.3](http://php.net/downloads.php), and [MySQL 5.6.13](http://dev.mysql.com/downloads/mysql/ "MySQL Server").
 
 To run this environment you will only need the following installed on your computer:
 
-* [Git](http://git-scm.com/downloads)
+* [Git](http://git-scm.com/downloads) _(optional)_
 * [Vagrant](http://downloads.vagrantup.com/)
 * [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
 
@@ -18,9 +22,7 @@ You do not need to download and install nginx, PHP, or MySQL. However, if you'd 
 
 ## Setup
 
-To watch me get my environment set up, [see this video](http://youtube.com/ "PHPshow: Setup your environment").
-
-* Clone this repository, or download and extract the [zip file](https://github.com/3ft9/phpshow/archive/master.zip "The latest PHPshow Environment in a zip file"). Cloning is recommended so you can easily keep up to date.
+* Clone [this git repository](https://github.com/3ft9/phpshow "The PHPshow Environment Repository on GitHub"), or download and extract the [zip file](https://github.com/3ft9/phpshow/archive/master.zip "The latest PHPshow Environment in a zip file"). Cloning is recommended so you can more easily keep up to date.
 * Open a terminal/command window in the resulting directory.
 * Run "vagrant up" (without quotes).
 
