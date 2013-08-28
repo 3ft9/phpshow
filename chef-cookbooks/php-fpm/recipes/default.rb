@@ -56,7 +56,7 @@ bash "compile_php_source" do
 		cd php-#{node[:php][:version]}
 		./configure --enable-fpm --with-config-file-path=#{node[:php][:ini_location]} --with-config-file-scan-dir=#{node[:php][:ini_scandir]} #{node[:php][:configure_options]}
 		make && make install
-		ln -s "/usr/local/bin/php" "/usr/local/bin/php#{node[:php][:version]}" "#{node[:php][:ini_location]}/php.ini"
+		ln -s "/usr/local/bin/php" "/usr/local/bin/php#{node[:php][:version]}"
 	EOH
 	creates "/usr/local/bin/php#{node[:php][:version]}"
 end
